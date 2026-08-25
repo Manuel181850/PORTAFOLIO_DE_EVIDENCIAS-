@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Evidencias y laboratorios del portafolio de Ciberseguridad, organizados por parcial."
+  >
+
+  <title>Evidencias | Portafolio de Ciberseguridad</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <canvas id="matrix-rain" aria-hidden="true"></canvas>
+
+  <!-- Barra de navegación -->
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Navegación principal">
+
+      <a class="brand" href="index.html" aria-label="Ir al inicio">
+        <span class="brand-symbol">&gt;_</span>
+        <span class="brand-text">MHG<span>.sec</span></span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="mainMenu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-menu" id="mainMenu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="index.html#sobre-mi">Sobre mí</a></li>
+        <li><a href="evidencias.html" class="active-link">Evidencias</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Encabezado de la página -->
+    <section class="evidence-hero section">
+      <div class="container">
+        <p class="eyebrow">
+          <span class="status-dot"></span>
+          Trabajo académico
+        </p>
+        <h1 class="evidence-title">Evidencias y laboratorios</h1>
+        <p class="evidence-subtitle">
+          Prácticas, investigaciones y reportes del curso CNO IV – Seguridad
+          Informática, organizados por parcial.
+        </p>
+
+        <!-- Navegación rápida entre parciales -->
+        <div class="parcial-tabs">
+          <a href="#parcial-1" class="parcial-tab">Primer parcial</a>
+          <a href="#parcial-2" class="parcial-tab">Segundo parcial</a>
+          <a href="#parcial-3" class="parcial-tab">Tercer parcial</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRIMER PARCIAL ============ -->
+    <section class="evidence section" id="parcial-1">
+      <div class="container">
+
+        <div class="section-heading">
+          <div>
+            <p class="section-label">Bloque 01</p>
+            <h2>Primer parcial</h2>
+          </div>
+          <p class="section-intro">
+            Evidencias correspondientes al primer parcial del curso.
+          </p>
+        </div>
+
+        <div class="evidence-grid">
+
+          <!--
+            Duplica este bloque <article> para agregar otra evidencia
+            en este parcial.
+          -->
+          <article class="evidence-card link-card">
+            <div class="card-top">
+              <span class="card-number">LAB. 02</span>
+              <span class="card-type">Evidencia</span>
+            </div>
+
+            <div class="card-icon" aria-hidden="true">◉</div>
+
+            <h3>Análisis de Spyware Básico en Python</h3>
+
+            <p>
+              Análisis técnico y práctico sobre la recolección no autorizada
+              de información mediante un script en Python, evaluando riesgos
+              e impacto.
+            </p>
+
+            <div class="tags">
+              <span>#Python</span>
+              <span>#Spyware</span>
+              <span>#Ciberseguridad</span>
+              <span>#UPSLP</span>
+            </div>
+
+            <a
+              class="card-link"
+              href="spyware-analisis.html"
+            >
+              Ver reporte y análisis
+              <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+
+        </div>
+
+        <div class="add-evidence">
+          <span>+</span>
+          <p>
+            Agrega nuevas tarjetas conforme avances en el primer parcial.
+            <br>
+            <small>Duplica una tarjeta existente y modifica su contenido.</small>
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ SEGUNDO PARCIAL ============ -->
+    <section class="evidence section section-alt" id="parcial-2">
+      <div class="container">
+
+        <div class="section-heading">
+          <div>
+            <p class="section-label">Bloque 02</p>
+            <h2>Segundo parcial</h2>
+          </div>
+          <p class="section-intro">
+            Evidencias correspondientes al segundo parcial del curso.
+          </p>
+        </div>
+
+        <div class="evidence-grid">
+          <div class="empty-state">
+            <span class="empty-icon">◌</span>
+            <p>Aún no hay evidencias registradas para este parcial.</p>
+            <small>Se agregarán conforme avance el curso.</small>
+          </div>
+        </div>
+
+        <div class="add-evidence">
+          <span>+</span>
+          <p>
+            Agrega nuevas tarjetas conforme avances en el segundo parcial.
+            <br>
+            <small>Duplica una tarjeta existente del primer parcial y modifica su contenido.</small>
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ TERCER PARCIAL ============ -->
+    <section class="evidence section" id="parcial-3">
+      <div class="container">
+
+        <div class="section-heading">
+          <div>
+            <p class="section-label">Bloque 03</p>
+            <h2>Tercer parcial</h2>
+          </div>
+          <p class="section-intro">
+            Evidencias correspondientes al tercer parcial del curso.
+          </p>
+        </div>
+
+        <div class="evidence-grid">
+          <div class="empty-state">
+            <span class="empty-icon">◌</span>
+            <p>Aún no hay evidencias registradas para este parcial.</p>
+            <small>Se agregarán conforme avance el curso.</small>
+          </div>
+        </div>
+
+        <div class="add-evidence">
+          <span>+</span>
+          <p>
+            Agrega nuevas tarjetas conforme avances en el tercer parcial.
+            <br>
+            <small>Duplica una tarjeta existente del primer parcial y modifica su contenido.</small>
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>
+        © <span id="currentYear"></span> Manuel Eduardo Hernández Gaytán.
+        Portafolio académico de Ciberseguridad — UPSLP.
+      </p>
+
+      <span class="ssl-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5l-8-3Z"/>
+          <path d="m9 12 2 2 4-4"/>
+        </svg>
+        HTTPS — Sitio Seguro y Certificado (SSL)
+      </span>
+
+      <a
+        href="https://github.com/Manuel181850"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        github.com/Manuel181850 ↗
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

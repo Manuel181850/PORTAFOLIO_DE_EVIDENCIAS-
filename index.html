@@ -9,7 +9,7 @@
     content="Portafolio de evidencias de la materia de Ciberseguridad."
   >
 
-  <title>Portafolio de Ciberseguridad | Tu Nombre</title>
+  <title>Portafolio de Ciberseguridad | Manuel Hernández</title>
 
   <!-- Tipografía moderna desde Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,6 +24,22 @@
 </head>
 
 <body>
+  <canvas id="matrix-rain" aria-hidden="true"></canvas>
+
+  <!-- Barra de identificación académica -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span class="topbar-item">
+        <strong>Manuel Eduardo Hernández Gaytán</strong> <span class="topbar-alias">(@MHG)</span>
+      </span>
+      <span class="topbar-sep" aria-hidden="true">·</span>
+      <span class="topbar-item">CNO IV – Seguridad Informática</span>
+      <span class="topbar-sep" aria-hidden="true">·</span>
+      <span class="topbar-item">UPSLP</span>
+      <span class="topbar-sep" aria-hidden="true">·</span>
+      <span class="topbar-item">Parcial 1 / Ciclo 2026</span>
+    </div>
+  </div>
 
   <!-- Barra de navegación -->
   <header class="site-header">
@@ -31,7 +47,7 @@
 
       <a class="brand" href="#inicio" aria-label="Ir al inicio">
         <span class="brand-symbol">&gt;_</span>
-        <span class="brand-text">TuNombre<span>.sec</span></span>
+        <span class="brand-text">MHG<span>.sec</span></span>
       </a>
 
       <button
@@ -50,7 +66,7 @@
       <ul class="nav-menu" id="mainMenu">
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#sobre-mi">Sobre mí</a></li>
-        <li><a href="#evidencias">Evidencias</a></li>
+        <li><a href="evidencias.html">Evidencias</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
     </nav>
@@ -70,7 +86,7 @@
 
           <h1>
             Explorando el mundo de la
-            <span class="highlight">ciberseguridad.</span>
+            <span class="highlight glitch" data-text="ciberseguridad.">ciberseguridad.</span>
           </h1>
 
           <p class="hero-description">
@@ -80,13 +96,13 @@
           </p>
 
           <div class="hero-actions">
-            <a href="#evidencias" class="button button-primary">
+            <a href="evidencias.html" class="button button-primary">
               Ver evidencias
               <span aria-hidden="true">↓</span>
             </a>
 
             <a
-              href="https://github.com/TU_USUARIO"
+              href="https://github.com/Manuel181850"
               class="button button-secondary"
               target="_blank"
               rel="noopener noreferrer"
@@ -112,7 +128,7 @@
               <span class="terminal-prompt">visitor@portfolio:~$</span>
               whoami
             </p>
-            <p class="terminal-output">Estudiante de Ciberseguridad</p>
+            <p class="terminal-output">Manuel Hernández — Estudiante de ITI, UPSLP</p>
 
             <p>
               <span class="terminal-prompt">visitor@portfolio:~$</span>
@@ -134,34 +150,111 @@
       </div>
     </section>
 
+    <!-- Sección de presentación del portafolio -->
+    <section class="presentation section" id="presentacion">
+      <div class="container">
+
+        <div class="section-heading">
+          <div>
+            <p class="section-label">01 / Presentación</p>
+            <h2>Qué es este portafolio</h2>
+          </div>
+          <p class="section-intro">
+            Un contenedor oficial de las evidencias académicas generadas a lo
+            largo del curso, documentando el proceso de aprendizaje parcial a
+            parcial.
+          </p>
+        </div>
+
+        <div class="presentation-grid">
+          <div class="presentation-card">
+            <div class="card-icon" aria-hidden="true">◈</div>
+            <h3>Propósito</h3>
+            <p>
+              Este sitio funciona como contenedor oficial de las evidencias
+              académicas del curso, organizadas y accesibles públicamente
+              mediante una URL.
+            </p>
+          </div>
+
+          <div class="presentation-card">
+            <div class="card-icon" aria-hidden="true">⌘</div>
+            <h3>Enfoque del curso</h3>
+            <p>
+              CNO IV aborda seguridad informática, pruebas de penetración y
+              análisis de vulnerabilidades, siempre en entornos controlados y
+              con fines educativos.
+            </p>
+          </div>
+
+          <div class="presentation-card">
+            <div class="card-icon" aria-hidden="true">◷</div>
+            <h3>Importancia académica</h3>
+            <p>
+              Documentar el proceso —no solo el resultado— evidencia la
+              evolución técnica y metodológica del estudiante durante el
+              semestre.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
     <!-- Sección sobre mí -->
-    <section class="about section" id="sobre-mi">
+    <section class="about section section-alt" id="sobre-mi">
       <div class="container about-grid">
 
         <div>
-          <p class="section-label">01 / Perfil</p>
+          <p class="section-label">02 / Perfil</p>
           <h2>Sobre mí</h2>
         </div>
 
         <div class="about-content">
-          <p class="large-text">
-            Soy <strong>Tu Nombre</strong>, estudiante de
-            <strong>Nombre de tu carrera</strong> en
-            <strong>Nombre de tu universidad</strong>.
-          </p>
 
-          <p>
-            Actualmente curso la materia de Ciberseguridad, donde desarrollo
-            conocimientos prácticos sobre protección de sistemas, redes,
-            análisis de vulnerabilidades y buenas prácticas de seguridad.
-          </p>
+          <div class="profile-wrap">
+            <div class="avatar">
+              <span class="avatar-initials">MH</span>
+              <span class="avatar-label">Foto / avatar</span>
+            </div>
+
+            <div class="profile-text">
+              <p class="large-text">
+                Soy <strong>Manuel Eduardo Hernández Gaytán</strong>, estudiante de
+                <strong>Ingeniería en Tecnologías de la Información (ITI)</strong> en la
+                <strong>Universidad Politécnica de San Luis Potosí</strong>.
+              </p>
+
+              <p>
+                Actualmente curso la materia de CNO IV – Seguridad Informática,
+                donde desarrollo conocimientos prácticos sobre protección de
+                sistemas, redes, análisis de vulnerabilidades y buenas prácticas
+                de seguridad.
+              </p>
+
+              <div class="tag-list">
+                <span class="tag">Ciberseguridad</span>
+                <span class="tag">Seguridad en Redes</span>
+                <span class="tag">Ethical Hacking</span>
+                <span class="tag">Investigación</span>
+              </div>
+            </div>
+          </div>
 
           <div class="info-list">
             <div class="info-item">
               <span class="info-icon">◈</span>
               <div>
                 <span class="info-label">Institución</span>
-                <span class="info-value">Nombre de la universidad</span>
+                <span class="info-value">Universidad Politécnica de San Luis Potosí</span>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <span class="info-icon">#</span>
+              <div>
+                <span class="info-label">Matrícula</span>
+                <span class="info-value">181850</span>
               </div>
             </div>
 
@@ -169,15 +262,7 @@
               <span class="info-icon">◷</span>
               <div>
                 <span class="info-label">Periodo académico</span>
-                <span class="info-value">2025 - 2026</span>
-              </div>
-            </div>
-
-            <div class="info-item">
-              <span class="info-icon">⌁</span>
-              <div>
-                <span class="info-label">Intereses</span>
-                <span class="info-value">Seguridad ofensiva y defensiva</span>
+                <span class="info-value">Parcial 1 / Ciclo 2026</span>
               </div>
             </div>
           </div>
@@ -186,207 +271,53 @@
       </div>
     </section>
 
-    <!-- Sección de evidencias -->
-    <section class="evidence section" id="evidencias">
+    <!-- Sección de información técnica básica -->
+    <section class="tech section" id="tecnico">
       <div class="container">
 
         <div class="section-heading">
           <div>
-            <p class="section-label">02 / Trabajo académico</p>
-            <h2>Evidencias y laboratorios</h2>
+            <p class="section-label">03 / Stack técnico</p>
+            <h2>Información técnica básica</h2>
           </div>
-
           <p class="section-intro">
-            Prácticas y actividades organizadas cronológicamente.
-            Esta sección puede crecer con cada nueva semana de trabajo.
+            Tecnología utilizada para construir y publicar este portafolio.
           </p>
         </div>
 
-        <div class="evidence-grid">
+        <div class="tech-grid">
+          <table class="tech-table">
+            <tbody>
+              <tr>
+                <td>Lenguajes / tecnologías</td>
+                <td>
+                  <div class="pill-row">
+                    <span class="pill">HTML5</span>
+                    <span class="pill">CSS3</span>
+                    <span class="pill">JavaScript</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Plataforma de publicación</td>
+                <td>GitHub Pages</td>
+              </tr>
+              <tr>
+                <td>Control de versiones</td>
+                <td>Git / GitHub</td>
+              </tr>
+            </tbody>
+          </table>
 
-          <!--
-            TIPO A: Tarjeta con enlace directo a un repositorio externo.
-            Para agregar otra tarjeta, duplica este bloque article.
-          -->
-          <article class="evidence-card link-card">
-            <div class="card-top">
-              <span class="card-number">LAB. 01</span>
-              <span class="card-type">Repositorio</span>
-            </div>
-
-            <div class="card-icon" aria-hidden="true">⌘</div>
-
-            <h3>Introducción a Linux</h3>
-
+          <div class="tech-card">
+            <div class="card-icon" aria-hidden="true">&lt;/&gt;</div>
+            <h3>Sitio nativo, sin frameworks</h3>
             <p>
-              Comandos esenciales, permisos, usuarios, procesos y estructura
-              de archivos en un sistema Linux.
+              Construido con HTML, CSS y JavaScript vanilla, priorizando
+              código claro, mantenible y fácil de versionar en un
+              repositorio académico.
             </p>
-
-            <div class="tags">
-              <span>#Linux</span>
-              <span>#Terminal</span>
-              <span>#Sistemas</span>
-            </div>
-
-            <a
-              class="card-link"
-              href="https://github.com/TU_USUARIO/laboratorio-linux"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Ver repositorio
-              <span aria-hidden="true">↗</span>
-            </a>
-          </article>
-
-          <!-- TIPO A: Segunda tarjeta con enlace directo -->
-          <article class="evidence-card link-card">
-            <div class="card-top">
-              <span class="card-number">LAB. 02</span>
-              <span class="card-type">Repositorio</span>
-            </div>
-
-            <div class="card-icon" aria-hidden="true">⌁</div>
-
-            <h3>Fundamentos de Networking</h3>
-
-            <p>
-              Investigación sobre protocolos de red, direccionamiento IP,
-              modelo OSI y herramientas de diagnóstico.
-            </p>
-
-            <div class="tags">
-              <span>#Networking</span>
-              <span>#TCP-IP</span>
-              <span>#Wireshark</span>
-            </div>
-
-            <a
-              class="card-link"
-              href="https://github.com/TU_USUARIO/laboratorio-networking"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Ver repositorio
-              <span aria-hidden="true">↗</span>
-            </a>
-          </article>
-
-          <!--
-            TIPO B: Tarjeta amplia para contenido incrustado.
-            Reemplaza el valor de src por el enlace de tu PDF,
-            visor o recurso compatible con iframe.
-          -->
-          <article class="evidence-card embed-card">
-            <div class="card-top">
-              <span class="card-number">SEMANA 03</span>
-              <span class="card-type">Evidencia incrustada</span>
-            </div>
-
-            <div class="embed-layout">
-              <div class="embed-description">
-                <div class="card-icon" aria-hidden="true">▣</div>
-
-                <h3>Análisis de vulnerabilidades</h3>
-
-                <p>
-                  Reporte de práctica con metodología de análisis,
-                  identificación de riesgos y recomendaciones de mitigación.
-                </p>
-
-                <div class="tags">
-                  <span>#Pentesting</span>
-                  <span>#Vulnerabilidades</span>
-                  <span>#Reporte</span>
-                </div>
-
-                <a
-                  class="card-link"
-                  href="https://github.com/TU_USUARIO/evidencia-vulnerabilidades"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Abrir evidencia
-                  <span aria-hidden="true">↗</span>
-                </a>
-              </div>
-
-              <div class="iframe-wrapper">
-                <!-- Ejemplo para un PDF:
-                <iframe src="documentos/reporte-vulnerabilidades.pdf"
-                        title="Reporte de análisis de vulnerabilidades">
-                </iframe>
-                -->
-
-                <!-- Contenedor provisional visible hasta agregar tu recurso -->
-                <div class="iframe-placeholder">
-                  <span class="placeholder-icon">＋</span>
-                  <strong>Área de evidencia</strong>
-                  <small>
-                    Inserta aquí un PDF, captura o visor mediante un iframe.
-                  </small>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <!-- TIPO B: Tarjeta incrustada para código, capturas o documentación -->
-          <article class="evidence-card embed-card">
-            <div class="card-top">
-              <span class="card-number">SEMANA 04</span>
-              <span class="card-type">Evidencia incrustada</span>
-            </div>
-
-            <div class="embed-layout">
-              <div class="embed-description">
-                <div class="card-icon" aria-hidden="true">&lt;/&gt;</div>
-
-                <h3>Buenas prácticas de seguridad web</h3>
-
-                <p>
-                  Evidencia visual de la práctica y notas sobre autenticación,
-                  validación de entradas y protección de información.
-                </p>
-
-                <div class="tags">
-                  <span>#WebSecurity</span>
-                  <span>#OWASP</span>
-                  <span>#SecureCode</span>
-                </div>
-
-                <a
-                  class="card-link"
-                  href="https://github.com/TU_USUARIO/seguridad-web"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Abrir proyecto
-                  <span aria-hidden="true">↗</span>
-                </a>
-              </div>
-
-              <div class="iframe-wrapper">
-                <!-- Sustituye este contenedor por tu iframe real. -->
-                <div class="iframe-placeholder code-preview">
-                  <span class="code-line"><i>01</i> function secureApp() {</span>
-                  <span class="code-line"><i>02</i> &nbsp;&nbsp;return protected;</span>
-                  <span class="code-line"><i>03</i> }</span>
-                  <span class="code-line cursor-line"><i>04</i> _</span>
-                </div>
-              </div>
-            </div>
-          </article>
-
-        </div>
-
-        <div class="add-evidence">
-          <span>+</span>
-          <p>
-            Agrega nuevas tarjetas conforme avances en el curso.
-            <br>
-            <small>Duplica una tarjeta existente y modifica su contenido.</small>
-          </p>
+          </div>
         </div>
 
       </div>
@@ -396,7 +327,7 @@
     <section class="contact section" id="contacto">
       <div class="container contact-box">
         <div>
-          <p class="section-label">03 / Enlaces</p>
+          <p class="section-label">04 / Enlaces</p>
           <h2>Conecta conmigo</h2>
           <p>
             Consulta mis proyectos y repositorios en mi perfil principal.
@@ -405,7 +336,7 @@
 
         <a
           class="button button-primary"
-          href="https://github.com/TU_USUARIO"
+          href="https://github.com/Manuel181850"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -415,55 +346,98 @@
       </div>
     </section>
 
+    <!-- Sección de formulario de contacto -->
+    <section class="contact-form section" id="mensaje">
+      <div class="container">
+
+        <div class="section-heading">
+          <div>
+            <p class="section-label">05 / Mensaje</p>
+            <h2>Envíame un mensaje</h2>
+          </div>
+          <p class="section-intro">
+            ¿Dudas sobre alguna evidencia o comentario sobre el portafolio?
+            Escríbeme directamente desde aquí.
+          </p>
+        </div>
+
+        <form
+          class="message-form"
+          id="contact-form"
+        >
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Nombre</label>
+              <input type="text" id="name" name="name" placeholder="Tu nombre completo" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Correo</label>
+              <input type="email" id="email" name="email" placeholder="tu.correo@ejemplo.com" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Comentario</label>
+            <textarea id="message" name="message" placeholder="Escribe tu comentario o duda..." required></textarea>
+          </div>
+
+          <!-- Campos ocultos: alias exigidos por la plantilla Auto-Reply de EmailJS -->
+          <input type="hidden" name="From_name">
+          <input type="hidden" name="From_email">
+
+          <button type="submit" class="button button-primary form-submit">
+            Enviar mensaje
+            <span aria-hidden="true">↗</span>
+          </button>
+
+          <p class="form-note">
+            Al enviar, recibirás una confirmación en pantalla y tu mensaje
+            llegará directamente a mi correo.
+          </p>
+        </form>
+
+      </div>
+    </section>
+
   </main>
 
   <!-- Pie de página -->
   <footer class="site-footer">
     <div class="container footer-content">
       <p>
-        © <span id="currentYear"></span> Tu Nombre. Portafolio académico de
-        Ciberseguridad.
+        © <span id="currentYear"></span> Manuel Eduardo Hernández Gaytán.
+        Portafolio académico de Ciberseguridad — UPSLP.
       </p>
 
+      <span class="ssl-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5l-8-3Z"/>
+          <path d="m9 12 2 2 4-4"/>
+        </svg>
+        HTTPS — Sitio Seguro y Certificado (SSL)
+      </span>
+
       <a
-        href="https://github.com/TU_USUARIO"
+        href="https://github.com/Manuel181850"
         target="_blank"
         rel="noopener noreferrer"
       >
-        github.com/TU_USUARIO ↗
+        github.com/Manuel181850 ↗
       </a>
     </div>
   </footer>
 
-  <!-- JavaScript básico -->
-  <script>
-    // Actualiza automáticamente el año del pie de página.
-    document.getElementById("currentYear").textContent =
-      new Date().getFullYear();
+  <!-- Toast de confirmación -->
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    <div class="toast-title">Mensaje enviado ✓</div>
+    <div class="toast-body">Gracias por tu mensaje.</div>
+  </div>
 
-    // Control del menú móvil.
-    const menuToggle = document.getElementById("menuToggle");
-    const mainMenu = document.getElementById("mainMenu");
+  <!-- JavaScript -->
+  <!-- SDK de EmailJS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
-    menuToggle.addEventListener("click", () => {
-      const isOpen = mainMenu.classList.toggle("is-open");
-
-      menuToggle.setAttribute("aria-expanded", isOpen);
-      menuToggle.setAttribute(
-        "aria-label",
-        isOpen ? "Cerrar menú" : "Abrir menú"
-      );
-    });
-
-    // Cierra el menú después de seleccionar una sección.
-    document.querySelectorAll(".nav-menu a").forEach((link) => {
-      link.addEventListener("click", () => {
-        mainMenu.classList.remove("is-open");
-        menuToggle.setAttribute("aria-expanded", "false");
-        menuToggle.setAttribute("aria-label", "Abrir menú");
-      });
-    });
-  </script>
+  <script src="script.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Análisis de spyware básico en Python — evidencia académica del curso CNO IV, UPSLP."
+  >
+
+  <title>Análisis de Spyware Básico | Portafolio de Ciberseguridad</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <canvas id="matrix-rain" aria-hidden="true"></canvas>
+
+  <!-- Barra de navegación -->
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Navegación principal">
+
+      <a class="brand" href="index.html" aria-label="Ir al inicio">
+        <span class="brand-symbol">&gt;_</span>
+        <span class="brand-text">MHG<span>.sec</span></span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="mainMenu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-menu" id="mainMenu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="index.html#sobre-mi">Sobre mí</a></li>
+        <li><a href="evidencias.html" class="active-link">Evidencias</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Encabezado de la evidencia -->
+    <section class="evidence-hero section">
+      <div class="container">
+        <p class="eyebrow">
+          <span class="status-dot"></span>
+          Primer parcial · Lab. 02
+        </p>
+        <h1 class="evidence-title glitch" data-text="Análisis de Spyware Básico en Python">Análisis de Spyware Básico en Python</h1>
+        <p class="evidence-subtitle">
+          Evaluación técnica de un script en Python con funcionalidad de
+          keylogger, realizada en un entorno controlado con fines
+          exclusivamente académicos dentro de CNO IV – Seguridad Informática.
+        </p>
+
+        <div class="tags" style="margin-bottom: 6px;">
+          <span>#Python</span>
+          <span>#Spyware</span>
+          <span>#Ciberseguridad</span>
+          <span>#UPSLP</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resumen ejecutivo -->
+    <section class="presentation section" id="resumen">
+      <div class="container">
+
+        <div class="section-heading">
+          <div>
+            <p class="section-label">01 / Resumen ejecutivo</p>
+            <h2>¿Qué se analizó?</h2>
+          </div>
+          <p class="section-intro">
+            Contexto general del script evaluado y de la amenaza que
+            representa este tipo de programa.
+          </p>
+        </div>
+
+        <div class="presentation-grid">
+          <div class="presentation-card">
+            <div class="card-icon" aria-hidden="true">◉</div>
+            <h3>¿Qué hace?</h3>
+            <p>
+              Se trata de un keylogger: un script que se ejecuta en segundo
+              plano y registra continuamente la actividad de teclado del
+              equipo, guardando cada evento en un archivo de registro local.
+            </p>
+          </div>
+
+          <div class="presentation-card">
+            <div class="card-icon" aria-hidden="true">&lt;/&gt;</div>
+            <h3>Bibliotecas utilizadas</h3>
+            <p>
+              El script se apoya en librerías estándar y de terceros de
+              Python para el manejo de fecha/hora y para la escucha de
+              eventos de teclado a nivel de sistema operativo.
+            </p>
+          </div>
+
+          <div class="presentation-card">
+            <div class="card-icon" aria-hidden="true">⚠</div>
+            <h3>Implicaciones</h3>
+            <p>
+              No requiere privilegios elevados para operar y puede capturar
+              contraseñas, mensajes y cualquier información sensible que se
+              escriba mientras el proceso está activo, comprometiendo la
+              confidencialidad del usuario.
+            </p>
+          </div>
+        </div>
+
+        <div class="note-callout">
+          <strong>Nota académica:</strong> por política de uso responsable,
+          esta página no reproduce ni explica el código del script línea por
+          línea. El desglose técnico completo (bibliotecas específicas,
+          funciones y flujo del programa) se documenta en el reporte
+          formal, en la sección "Análisis Técnico del Código".
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Descarga y visor del reporte -->
+    <section class="evidence section section-alt" id="reporte">
+      <div class="container">
+
+        <div class="section-heading">
+          <div>
+            <p class="section-label">02 / Reporte formal</p>
+            <h2>Documento completo</h2>
+          </div>
+          <p class="section-intro">
+            Reporte técnico con introducción, análisis del código, evidencias
+            visuales y estrategias de mitigación.
+          </p>
+        </div>
+
+        <div class="report-download">
+          <div class="report-download-text">
+            <div class="card-icon" aria-hidden="true">▤</div>
+            <h3>Reporte_Spyware_Manuel_Hernandez_181850.pdf</h3>
+            <p>Documento en formato PDF, listo para revisión o impresión.</p>
+          </div>
+          <a href="reporte_spyware.pdf" download class="button button-primary">
+            Descargar Reporte PDF
+            <span aria-hidden="true">↓</span>
+          </a>
+        </div>
+
+        <div class="pdf-viewer">
+          <object data="reporte_spyware.pdf" type="application/pdf" width="100%" height="600">
+            <div class="iframe-placeholder">
+              <span class="placeholder-icon">▤</span>
+              <strong>No se pudo previsualizar el PDF</strong>
+              <small>Tu navegador no admite la vista embebida. Usa el botón de descarga.</small>
+            </div>
+          </object>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>
+        © <span id="currentYear"></span> Manuel Eduardo Hernández Gaytán.
+        Portafolio académico de Ciberseguridad — UPSLP.
+      </p>
+
+      <span class="ssl-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5l-8-3Z"/>
+          <path d="m9 12 2 2 4-4"/>
+        </svg>
+        HTTPS — Sitio Seguro y Certificado (SSL)
+      </span>
+
+      <a
+        href="https://github.com/Manuel181850"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        github.com/Manuel181850 ↗
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
