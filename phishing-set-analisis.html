@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Simulación de ingeniería social y análisis de captura de credenciales con SET — evidencia académica del curso CNO IV, UPSLP."
+  >
+
+  <title>Una página demasiado convincente | Portafolio de Ciberseguridad</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <canvas id="matrix-rain" aria-hidden="true"></canvas>
+
+  <!-- Barra de navegación -->
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Navegación principal">
+
+      <a class="brand" href="index.html" aria-label="Ir al inicio">
+        <span class="brand-symbol">&gt;_</span>
+        <span class="brand-text">MHG<span>.sec</span></span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="mainMenu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-menu" id="mainMenu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="index.html#sobre-mi">Sobre mí</a></li>
+        <li><a href="evidencias.html" class="active-link">Evidencias</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Encabezado de la evidencia -->
+    <section class="evidence-hero section">
+      <div class="container">
+        <p class="eyebrow">
+          <span class="status-dot"></span>
+          Primer parcial · Lab. 03 · Actividad 04
+        </p>
+        <h1 class="evidence-title glitch" data-text="Una página demasiado convincente">Una página demasiado convincente</h1>
+        <p class="evidence-subtitle">
+          Simulación de ingeniería social y análisis de captura de
+          credenciales con Social-Engineer Toolkit (SET), realizada en un
+          laboratorio controlado dentro de CNO IV – Seguridad Informática.
+        </p>
+
+        <div class="tags" style="margin-bottom: 6px;">
+          <span>#Phishing</span>
+          <span>#IngenieríaSocial</span>
+          <span>#SET</span>
+          <span>#Ciberseguridad</span>
+          <span>#UPSLP</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resumen ejecutivo -->
+    <section class="presentation section" id="resumen">
+      <div class="container">
+
+        <div class="section-heading">
+          <div>
+            <p class="section-label">01 / Resumen ejecutivo</p>
+            <h2>¿Qué se analizó?</h2>
+          </div>
+          <p class="section-intro">
+            Contexto general del laboratorio y de la técnica de ingeniería
+            social evaluada.
+          </p>
+        </div>
+
+        <div class="presentation-grid">
+          <div class="presentation-card">
+            <div class="card-icon" aria-hidden="true">⚑</div>
+            <h3>¿Qué es un Credential Harvester?</h3>
+            <p>
+              Un módulo que suplanta un formulario de inicio de sesión
+              legítimo: cuando la víctima envía sus datos, estos se
+              interceptan y registran en el servidor del atacante en lugar
+              de autenticarla contra el sistema real.
+            </p>
+          </div>
+
+          <div class="presentation-card">
+            <div class="card-icon" aria-hidden="true">&lt;/&gt;</div>
+            <h3>Herramienta utilizada</h3>
+            <p>
+              Social-Engineer Toolkit (SET), un framework de código abierto
+              ampliamente documentado y usado en pruebas de ingeniería
+              social dentro de entornos de laboratorio controlados.
+            </p>
+          </div>
+
+          <div class="presentation-card">
+            <div class="card-icon" aria-hidden="true">⚠</div>
+            <h3>Indicadores de phishing</h3>
+            <p>
+              El reporte documenta cinco señales clave para reconocer un
+              portal fraudulento: URLs sospechosas, ausencia de HTTPS,
+              mensajes de urgencia, recursos rotos y enlaces inactivos.
+            </p>
+          </div>
+        </div>
+
+        <div class="note-callout">
+          <strong>Nota académica:</strong> esta página resume el propósito y
+          los hallazgos del laboratorio a nivel conceptual. La configuración
+          técnica paso a paso, los comandos utilizados y el análisis
+          detallado del flujo de captura se documentan íntegramente en el
+          reporte formal en PDF.
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Descarga y visor del reporte -->
+    <section class="evidence section section-alt" id="reporte">
+      <div class="container">
+
+        <div class="section-heading">
+          <div>
+            <p class="section-label">02 / Reporte formal</p>
+            <h2>Documento completo</h2>
+          </div>
+          <p class="section-intro">
+            Reporte técnico con objetivo, escenario, configuración del
+            laboratorio, evidencias, indicadores y controles de mitigación.
+          </p>
+        </div>
+
+        <div class="report-download">
+          <div class="report-download-text">
+            <div class="card-icon" aria-hidden="true">▤</div>
+            <h3>reporte_actividad_04_phishing.pdf</h3>
+            <p>Documento en formato PDF, listo para revisión o impresión.</p>
+          </div>
+          <a href="reporte_actividad_04_phishing.pdf" download class="button button-primary">
+            Descargar Reporte PDF
+            <span aria-hidden="true">↓</span>
+          </a>
+        </div>
+
+        <div class="pdf-viewer">
+          <object data="reporte_actividad_04_phishing.pdf" type="application/pdf" width="100%" height="600">
+            <div class="iframe-placeholder">
+              <span class="placeholder-icon">▤</span>
+              <strong>No se pudo previsualizar el PDF</strong>
+              <small>Tu navegador no admite la vista embebida. Usa el botón de descarga.</small>
+            </div>
+          </object>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>
+        © <span id="currentYear"></span> Manuel Eduardo Hernández Gaytán.
+        Portafolio académico de Ciberseguridad — UPSLP.
+      </p>
+
+      <span class="ssl-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5l-8-3Z"/>
+          <path d="m9 12 2 2 4-4"/>
+        </svg>
+        HTTPS — Sitio Seguro y Certificado (SSL)
+      </span>
+
+      <a
+        href="https://github.com/Manuel181850"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        github.com/Manuel181850 ↗
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
