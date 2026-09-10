@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="PR01 Walkthrough — prueba de penetración completa sobre la máquina Snakeoil, en entorno de laboratorio controlado."
+  >
+
+  <title>PR01 Walkthrough | Portafolio de Ciberseguridad</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <canvas id="matrix-rain" aria-hidden="true"></canvas>
+
+  <!-- Barra de navegación -->
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Navegación principal">
+
+      <a class="brand" href="index.html" aria-label="Ir al inicio">
+        <span class="brand-symbol">&gt;_</span>
+        <span class="brand-text">MHG<span>.sec</span></span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="mainMenu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-menu" id="mainMenu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="index.html#sobre-mi">Sobre mí</a></li>
+        <li><a href="evidencias.html" class="active-link">Evidencias</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Encabezado -->
+    <section class="evidence-hero section">
+      <div class="container">
+        <p class="eyebrow">
+          <span class="status-dot"></span>
+          Proyecto · Laboratorio controlado
+        </p>
+        <h1 class="evidence-title glitch" data-text="PR01 Walkthrough">PR01 Walkthrough</h1>
+        <p class="evidence-subtitle">
+          Prueba de penetración completa sobre la máquina virtual vulnerable
+          "Snakeoil", ejecutada íntegramente dentro de un entorno de
+          laboratorio aislado (red host-only), con fines exclusivamente
+          académicos.
+        </p>
+
+        <div class="tags" style="margin-bottom: 6px;">
+          <span>#Pentesting</span>
+          <span>#CTF</span>
+          <span>#Flask</span>
+          <span>#UPSLP</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resumen -->
+    <section class="presentation section" id="resumen">
+      <div class="container">
+
+        <div class="section-heading">
+          <div>
+            <p class="section-label">01 / Resumen</p>
+            <h2>Objetivo y alcance</h2>
+          </div>
+          <p class="section-intro">
+            Evaluar de forma metódica la superficie de ataque de una
+            aplicación web deliberadamente vulnerable, hasta confirmar el
+            impacto máximo posible dentro del laboratorio.
+          </p>
+        </div>
+
+        <div class="presentation-grid">
+          <div class="presentation-card">
+            <div class="card-icon" aria-hidden="true">◎</div>
+            <h3>Objetivo</h3>
+            <p>
+              Máquina virtual "Snakeoil", desplegada en una red interna
+              host-only sin salida a Internet, sin sistemas ni usuarios
+              reales involucrados.
+            </p>
+          </div>
+
+          <div class="presentation-card">
+            <div class="card-icon" aria-hidden="true">◈</div>
+            <h3>Metodología</h3>
+            <p>
+              Cuatro fases secuenciales: Reconocimiento, Enumeración,
+              Explotación y Post-explotación / Escalada de privilegios.
+            </p>
+          </div>
+
+          <div class="presentation-card">
+            <div class="card-icon" aria-hidden="true">✓</div>
+            <h3>Resultado</h3>
+            <p>
+              Se obtuvo acceso inicial a la aplicación, ejecución remota de
+              comandos y, finalmente, acceso con privilegios de
+              administrador (root) sobre el sistema objetivo.
+            </p>
+          </div>
+        </div>
+
+        <div class="note-callout">
+          <strong>Nota académica:</strong> por política de uso responsable,
+          esta página documenta el proceso a nivel metodológico —
+          herramientas, fases y clases de vulnerabilidad— sin reproducir
+          payloads, credenciales ni comandos de explotación específicos. El
+          detalle completo, dentro de lo permitido, está en el reporte
+          formal en PDF.
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Fases -->
+    <section class="evidence section section-alt" id="fases">
+      <div class="container">
+
+        <div class="section-heading">
+          <div>
+            <p class="section-label">02 / Metodología</p>
+            <h2>Fases del walkthrough</h2>
+          </div>
+          <p class="section-intro">
+            Proceso documentado paso a paso, a nivel de técnica y
+            herramienta.
+          </p>
+        </div>
+
+        <div class="phase-list">
+
+          <div class="phase-block">
+            <span class="phase-index">01</span>
+            <div class="phase-body">
+              <h3>Reconocimiento</h3>
+              <p class="phase-tools">Herramientas: netdiscover · nmap</p>
+              <p>
+                Identificación del host objetivo dentro de la red interna
+                del laboratorio mediante descubrimiento pasivo de tráfico
+                ARP, seguido de un escaneo de puertos y servicios expuestos.
+              </p>
+              <div class="code-block"><code><span class="prompt-sym">$</span>sudo netdiscover -i eth0
+<span class="prompt-sym">$</span>nmap -sV -p- &lt;IP_objetivo&gt;</code></div>
+            </div>
+          </div>
+
+          <div class="phase-block">
+            <span class="phase-index">02</span>
+            <div class="phase-body">
+              <h3>Enumeración</h3>
+              <p class="phase-tools">Herramientas: gobuster · Burp Suite</p>
+              <p>
+                Enumeración de directorios y endpoints sobre el servicio web
+                detectado, seguida de un análisis del tráfico HTTP con proxy
+                de interceptación para entender el flujo de autenticación de
+                la aplicación (registro, login y manejo de sesión por
+                token).
+              </p>
+              <ul>
+                <li>Se identificaron múltiples endpoints de una API REST interna.</li>
+                <li>Se observó un esquema de autenticación basado en JSON Web Tokens (JWT).</li>
+              </ul>
+              <div class="code-block"><code><span class="prompt-sym">$</span>gobuster dir -u http://&lt;IP_objetivo&gt;:&lt;puerto&gt; -w &lt;wordlist&gt;</code></div>
+            </div>
+          </div>
+
+          <div class="phase-block">
+            <span class="phase-index">03</span>
+            <div class="phase-body">
+              <h3>Explotación</h3>
+              <p class="phase-tools">Vulnerabilidades: credenciales hardcodeadas · inyección de comandos</p>
+              <p>
+                Durante la revisión del código fuente de la aplicación se
+                identificaron valores sensibles embebidos directamente en el
+                código, y un endpoint administrativo con validación de
+                entradas insuficiente (basada en lista negra), lo que
+                permitió lograr ejecución remota de comandos en el servidor.
+              </p>
+              <ul>
+                <li>Clase de vulnerabilidad: <em>Hardcoded Secrets</em> (CWE-798).</li>
+                <li>Clase de vulnerabilidad: <em>OS Command Injection</em> (CWE-78) por lista negra evadible.</li>
+                <li>Resultado: obtención de una shell remota sobre el host objetivo.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="phase-block">
+            <span class="phase-index">04</span>
+            <div class="phase-body">
+              <h3>Post-explotación y escalada de privilegios</h3>
+              <p class="phase-tools">Técnica: reutilización de credenciales · configuración de sudo</p>
+              <p>
+                Tras estabilizar el acceso remoto, se exploró el sistema de
+                archivos local, encontrando una contraseña reutilizada entre
+                el código fuente de la aplicación y las credenciales del
+                sistema operativo, lo que permitió elevar privilegios hasta
+                obtener una sesión como administrador (root) y confirmar el
+                compromiso total del objetivo.
+              </p>
+              <ul>
+                <li>Clase de vulnerabilidad: reutilización de contraseñas entre servicios y sistema operativo.</li>
+                <li>Resultado: acceso root confirmado sobre la máquina Snakeoil.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Video demostrativo -->
+    <section class="presentation section" id="video">
+      <div class="container">
+
+        <div class="section-heading">
+          <div>
+            <p class="section-label">03 / Video</p>
+            <h2>Demostración en video</h2>
+          </div>
+          <p class="section-intro">
+            Recorrido en video del proceso completo del laboratorio.
+          </p>
+        </div>
+
+        <div class="video-embed">
+          <!--
+            Reemplaza este bloque por tu iframe real de YouTube, por ejemplo:
+            <iframe
+              src="https://www.youtube.com/embed/TU_ID_DE_VIDEO"
+              title="PR01 Walkthrough - Demostración en video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            Pega aquí el enlace de tu video (usa el formato /embed/ de YouTube).
+          -->
+          <div class="video-placeholder">
+            <div class="video-play-icon" aria-hidden="true">▶</div>
+            <strong>Video pendiente de incrustar</strong>
+            <small>Sustituye este contenedor por el iframe de YouTube con la demostración de la práctica.</small>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Descarga y visor del reporte -->
+    <section class="evidence section section-alt" id="reporte">
+      <div class="container">
+
+        <div class="section-heading">
+          <div>
+            <p class="section-label">04 / Reporte formal</p>
+            <h2>Documento completo</h2>
+          </div>
+          <p class="section-intro">
+            Reporte técnico de auditoría con metodología, hallazgos por fase
+            y recomendaciones de mitigación.
+          </p>
+        </div>
+
+        <div class="report-download">
+          <div class="report-download-text">
+            <div class="card-icon" aria-hidden="true">▤</div>
+            <h3>Reporte_PR01_Walkthrough_Manuel_Hernandez_181850.pdf</h3>
+            <p>Documento en formato PDF, listo para revisión o impresión.</p>
+          </div>
+          <a href="Reporte_PR01_Walkthrough_Manuel_Hernandez_181850.pdf" download class="button button-primary">
+            Descargar Reporte PDF
+            <span aria-hidden="true">↓</span>
+          </a>
+        </div>
+
+        <div class="pdf-viewer">
+          <object data="Reporte_PR01_Walkthrough_Manuel_Hernandez_181850.pdf" type="application/pdf" width="100%" height="600">
+            <div class="iframe-placeholder">
+              <span class="placeholder-icon">▤</span>
+              <strong>No se pudo previsualizar el PDF</strong>
+              <small>Tu navegador no admite la vista embebida. Usa el botón de descarga.</small>
+            </div>
+          </object>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>
+        © <span id="currentYear"></span> Manuel Eduardo Hernández Gaytán.
+        Portafolio académico de Ciberseguridad — UPSLP.
+      </p>
+
+      <span class="ssl-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5l-8-3Z"/>
+          <path d="m9 12 2 2 4-4"/>
+        </svg>
+        HTTPS — Sitio Seguro y Certificado (SSL)
+      </span>
+
+      <a
+        href="https://github.com/Manuel181850"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        github.com/Manuel181850 ↗
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
