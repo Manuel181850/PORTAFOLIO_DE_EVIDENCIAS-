@@ -6,6 +6,174 @@
 
   <meta
     name="description"
+    content="Portafolio académico y profesional de Ciberseguridad de Manuel Eduardo Hernández Gaytán — UPSLP."
+  >
+
+  <title>Manuel Hernández | Portafolio de Ciberseguridad</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <canvas id="matrix-rain" aria-hidden="true"></canvas>
+
+  <!-- Barra de navegación -->
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Navegación principal">
+
+      <a class="brand" href="index.html" aria-label="Ir al inicio">
+        <span class="brand-symbol">&gt;_</span>
+        <span class="brand-text">MHG<span>.sec</span></span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="mainMenu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-menu" id="mainMenu">
+        <li><a href="index.html" class="active-link">Inicio</a></li>
+        <li><a href="index.html#sobre-mi">Sobre mí</a></li>
+        <li><a href="evidencias.html">Evidencias</a></li>
+        <!-- Enlace agregado al menú principal -->
+        <li><a href="road-to-hall-of-fame.html" class="nav-hof">Road to Hall of Fame</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Sección Hero Principal -->
+    <section class="hero section">
+      <div class="container hero-content">
+        <p class="eyebrow">
+          <span class="status-dot"></span>
+          Ingeniería en Tecnologías de la Información · UPSLP
+        </p>
+        <h1 class="hero-title glitch" data-text="Manuel Eduardo Hernández Gaytán">
+          Manuel Eduardo Hernández Gaytán
+        </h1>
+        <p class="hero-subtitle">
+          Estudiante de ingeniería, entusiasta de la ciberseguridad ofensiva, redes y sistemas embebidos. 
+          Documentando laboratorios, prácticas y retos técnicos en este portafolio.
+        </p>
+        
+        <div class="hero-actions">
+          <a href="evidencias.html" class="button button-primary">
+            Ver Evidencias y Prácticas
+            <span aria-hidden="true">→</span>
+          </a>
+          <!-- Botón de acceso directo destacado en la portada -->
+          <a href="road-to-hall-of-fame.html" class="button button-secondary" style="border-color: var(--accent-color); color: var(--accent-color);">
+            🏆 Road to Hall of Fame
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Sobre Mí (Breve) -->
+    <section class="presentation section" id="sobre-mi">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="section-label">01 / Perfil</p>
+            <h2>Sobre mí</h2>
+          </div>
+          <p class="section-intro">
+            Breve vistazo a mis áreas de especialización y enfoque técnico.
+          </p>
+        </div>
+
+        <div class="presentation-grid">
+          <div class="presentation-card">
+            <div class="card-icon" aria-hidden="true">🛡</div>
+            <h3>Ciberseguridad y Redes</h3>
+            <p>
+              Pruebas de penetración, análisis de vulnerabilidades web (OWASP Top 10), 
+              configuración de redes seguras y uso de herramientas en entornos Linux.
+            </p>
+          </div>
+
+          <div class="presentation-card">
+            <div class="card-icon" aria-hidden="true">⚡</div>
+            <h3>Sistemas e Infraestructura</h3>
+            <p>
+              Diagnóstico eléctrico automotriz, desarrollo con microcontroladores (ESP32/PIC) 
+              y automatización de tareas en Python y C/C++.
+            </p>
+          </div>
+
+          <!-- Tarjeta de acceso directo adicional dentro de las secciones -->
+          <div class="presentation-card" style="border: 1px dashed var(--accent-color);">
+            <div class="card-icon" aria-hidden="true">🎯</div>
+            <h3>Laboratorios PortSwigger</h3>
+            <p>
+              Seguimiento de mi progreso práctico resolviendo retos de la Web Security Academy 
+              en camino al Hall of Fame.
+            </p>
+            <a href="road-to-hall-of-fame.html" class="button button-primary" style="margin-top: 1rem; width: 100%; text-align: center;">
+              Ir a Hall of Fame →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>
+        © <span id="currentYear"></span> Manuel Eduardo Hernández Gaytán.
+        Portafolio académico de Ciberseguridad — UPSLP.
+      </p>
+
+      <span class="ssl-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5l-8-3Z"/>
+          <path d="m9 12 2 2 4-4"/>
+        </svg>
+        HTTPS — Sitio Seguro y Certificado (SSL)
+      </span>
+
+      <a
+        href="https://github.com/Manuel181850"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        github.com/Manuel181850 ↗
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
     content="Portafolio de evidencias de la materia de Ciberseguridad."
   >
 
