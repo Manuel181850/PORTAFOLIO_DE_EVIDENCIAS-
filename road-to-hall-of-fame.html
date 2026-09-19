@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Road to Hall of Fame - Portafolio de Ciberseguridad de Manuel Eduardo Hernández Gaytán, UPSLP."
+  >
+
+  <title>Road to Hall of Fame | Portafolio de Ciberseguridad</title>
+
+  <!-- Tipografía moderna desde Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Hoja de estilos principal -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <canvas id="matrix-rain" aria-hidden="true"></canvas>
+
+  <!-- Barra de identificación académica -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span class="topbar-item">
+        <strong>Manuel Eduardo Hernández Gaytán</strong> <span class="topbar-alias">(@MHG)</span>
+      </span>
+      <span class="topbar-sep" aria-hidden="true">·</span>
+      <span class="topbar-item">CNO IV – Seguridad Informática</span>
+      <span class="topbar-sep" aria-hidden="true">·</span>
+      <span class="topbar-item">UPSLP</span>
+      <span class="topbar-sep" aria-hidden="true">·</span>
+      <span class="topbar-item">Parcial 1 / Ciclo 2026</span>
+    </div>
+  </div>
+
+  <!-- Barra de navegación -->
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Navegación principal">
+
+      <a class="brand" href="index.html" aria-label="Ir al inicio">
+        <span class="brand-symbol">&gt;_</span>
+        <span class="brand-text">MHG<span>.sec</span></span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="mainMenu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-menu" id="mainMenu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="index.html#sobre-mi">Sobre mí</a></li>
+        <li><a href="evidencias.html">Evidencias</a></li>
+        <!-- Enlace apuntando a sí mismo para prevenir errores -->
+        <li><a href="road-to-hall-of-fame.html" class="nav-hof active-link">Road to Hall of Fame</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============ HERO DE ROAD TO HALL OF FAME ============ -->
+    <section class="hof-hero section">
+      <div class="container">
+        <p class="eyebrow">
+          <span class="status-dot"></span>
+          Actividad 06 · Módulo Especial
+        </p>
+        <h1 class="hof-title">
+          <span class="hof-icon" aria-hidden="true">◈</span>
+          Road to Hall of Fame
+        </h1>
+        <p class="hof-subtitle">
+          Ruta de progreso estructurada con el registro y documentación de laboratorios de seguridad web y hacking ético en entornos controlados.
+        </p>
+
+        <div class="hof-meta">
+          <span class="hof-meta-pill">
+            <span class="pill-dot"></span>
+            Portafolio Académico UPSLP
+          </span>
+          <span class="hof-meta-pill cyan">
+            <span class="pill-dot cyan"></span>
+            CNO IV – Seguridad Informática
+          </span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ ROADMAP DE LABORATORIOS ============ -->
+    <section class="section" id="roadmap-labs">
+      <div class="container">
+
+        <div class="section-heading">
+          <div>
+            <p class="section-label">Progreso técnico</p>
+            <h2>Ruta de laboratorios</h2>
+          </div>
+          <p class="section-intro">
+            Visualización secuencial de las prácticas de ciberseguridad integradas en la plataforma.
+          </p>
+        </div>
+
+        <!-- Contenedor del roadmap preparado para recibir los laboratorios -->
+        <div class="roadmap">
+          
+          <div class="empty-state">
+            <div class="empty-icon" aria-hidden="true">⚡</div>
+            <p>Módulo de laboratorios en proceso de integración.</p>
+            <small>Próximamente se agregarán los registros técnicos correspondientes.</small>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>
+        © <span id="currentYear"></span> Manuel Eduardo Hernández Gaytán.
+        Portafolio académico de Ciberseguridad — UPSLP.
+      </p>
+
+      <span class="ssl-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5l-8-3Z"/>
+          <path d="m9 12 2 2 4-4"/>
+        </svg>
+        HTTPS — Sitio Seguro y Certificado (SSL)
+      </span>
+
+      <a
+        href="https://github.com/Manuel181850"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        github.com/Manuel181850 ↗
+      </a>
+    </div>
+  </footer>
+
+  <!-- Script general -->
+  <script src="script.js"></script>
+
+</body>
+</html>
