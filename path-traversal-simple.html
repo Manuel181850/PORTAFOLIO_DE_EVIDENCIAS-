@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Análisis de vulnerabilidad de File Path Traversal (Simple Case) con Burp Suite — evidencia académica del curso CNO IV, UPSLP."
+  >
+
+  <title>File Path Traversal: Simple Case | Portafolio de Ciberseguridad</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <canvas id="matrix-rain" aria-hidden="true"></canvas>
+
+  <!-- Barra de navegación -->
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Navegación principal">
+
+      <a class="brand" href="index.html" aria-label="Ir al inicio">
+        <span class="brand-symbol">&gt;_</span>
+        <span class="brand-text">MHG<span>.sec</span></span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="mainMenu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-menu" id="mainMenu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="index.html#sobre-mi">Sobre mí</a></li>
+        <li><a href="evidencias.html" class="active-link">Evidencias</a></li>
+        <li><a href="road-to-hall-of-fame.html" class="nav-hof">Road to Hall of Fame</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Encabezado de la evidencia -->
+    <section class="evidence-hero section">
+      <div class="container">
+        <p class="eyebrow">
+          <span class="status-dot"></span>
+          Burp Suite · Lab: File path traversal, simple case
+        </p>
+        <h1 class="evidence-title glitch" data-text="File Path Traversal: Simple Case">File Path Traversal: Simple Case</h1>
+        <p class="evidence-subtitle">
+          Explotación de una vulnerabilidad de salto de directorio (Path Traversal) 
+          para acceder a archivos sensibles del sistema operativo (/etc/passwd) 
+          utilizando Burp Suite en un entorno controlado.
+        </p>
+
+        <div class="tags" style="margin-bottom: 6px;">
+          <span>#PathTraversal</span>
+          <span>#BurpSuite</span>
+          <span>#WebSecurity</span>
+          <span>#Apprentice</span>
+          <span>#UPSLP</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resumen ejecutivo -->
+    <section class="presentation section" id="resumen">
+      <div class="container">
+
+        <div class="section-heading">
+          <div>
+            <p class="section-label">01 / Resumen técnico</p>
+            <h2>¿En qué consistió la práctica?</h2>
+          </div>
+          <p class="section-intro">
+            Descripción general, nivel de dificultad y objetivo principal del laboratorio.
+          </p>
+        </div>
+
+        <div class="presentation-grid">
+          <div class="presentation-card">
+            <div class="card-icon" aria-hidden="true">⚑</div>
+            <h3>Nivel y Objetivo</h3>
+            <p>
+              <strong>Nivel:</strong> Apprentice[cite: 9].<br>
+              <strong>Objetivo:</strong> Explotar la funcionalidad de visualización de imágenes 
+              para recuperar de manera no autorizada el contenido del archivo crítico del sistema <code>/etc/passwd</code>[cite: 9].
+            </p>
+          </div>
+
+          <div class="presentation-card">
+            <div class="card-icon" aria-hidden="true">&lt;/&gt;</div>
+            <h3>Explicación de la Vulnerabilidad</h3>
+            <p>
+              Ocurre cuando una aplicación web procesa entradas del usuario (como parámetros de archivos) 
+              sin realizar una validación o saneamiento adecuado, permitiendo utilizar secuencias 
+              de escape de directorios (<code>../</code>) para navegar fuera del directorio web raíz.
+            </p>
+          </div>
+
+          <div class="presentation-card">
+            <div class="card-icon" aria-hidden="true">🛡</div>
+            <h3>Mitigación Recomendada</h3>
+            <p>
+              Evitar pasar rutas de archivos directamente desde los parámetros del cliente. 
+              Implementar listas blancas estrictas (whitelists) o utilizar funciones seguras del lenguaje 
+              que resuelvan la ruta absoluta dentro del directorio permitido (por ejemplo, <code>basename()</code>).
+            </p>
+          </div>
+        </div>
+
+        <div class="note-callout">
+          <strong>Nota académica:</strong> El procedimiento detallado, las capturas de pantalla de la intercepción, 
+          el análisis del payload y la evidencia de resolución se encuentran integrados en el visor del reporte formal en PDF adjunto abajo.
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Descarga y visor del reporte -->
+    <section class="evidence section section-alt" id="reporte">
+      <div class="container">
+
+        <div class="section-heading">
+          <div>
+            <p class="section-label">02 / Reporte formal</p>
+            <h2>Documento completo del laboratorio</h2>
+          </div>
+          <p class="section-intro">
+            Reporte estructurado con los 9 puntos requeridos para la máxima puntuación en la rúbrica académica.
+          </p>
+        </div>
+
+        <div class="report-download">
+          <div class="report-download-text">
+            <div class="card-icon" aria-hidden="true">▤</div>
+            <h3>Reporte_LAB03_FilePathTraversal_Manuel_Hernandez_181850.pdf</h3>
+            <p>Documento en formato PDF con la documentación completa paso a paso.</p>
+          </div>
+          <a href="Reporte_LAB03_FilePathTraversal_Manuel_Hernandez_181850.pdf" download class="button button-primary">
+            Descargar Reporte PDF
+            <span aria-hidden="true">↓</span>
+          </a>
+        </div>
+
+        <div class="pdf-viewer">
+          <object data="Reporte_LAB03_FilePathTraversal_Manuel_Hernandez_181850.pdf" type="application/pdf" width="100%" height="600">
+            <div class="iframe-placeholder">
+              <span class="placeholder-icon">▤</span>
+              <strong>No se pudo previsualizar el PDF</strong>
+              <small>Tu navegador no admite la vista embebida. Usa el botón de descarga.</small>
+            </div>
+          </object>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>
+        © <span id="currentYear"></span> Manuel Eduardo Hernández Gaytán.
+        Portafolio académico de Ciberseguridad — UPSLP.
+      </p>
+
+      <span class="ssl-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5l-8-3Z"/>
+          <path d="m9 12 2 2 4-4"/>
+        </svg>
+        HTTPS — Sitio Seguro y Certificado (SSL)
+      </span>
+
+      <a
+        href="https://github.com/Manuel181850"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        github.com/Manuel181850 ↗
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
