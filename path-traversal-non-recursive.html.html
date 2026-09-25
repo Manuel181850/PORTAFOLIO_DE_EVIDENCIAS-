@@ -68,7 +68,7 @@
         <h1 class="evidence-title glitch" data-text="Path Traversal: Non-Recursive Stripped">Path Traversal: Non-Recursive Stripped</h1>
         <p class="evidence-subtitle">
           Explotación de vulnerabilidad de salto de directorio donde las secuencias de escape se eliminan de forma no recursiva, 
-          permitiendo el uso de payloads anidados (....//) para acceder al archivo /etc/passwd[cite: 7].
+          permitiendo el uso de payloads anidados (....//) para acceder al archivo /etc/passwd.
         </p>
 
         <div class="tags" style="margin-bottom: 6px;">
@@ -101,7 +101,7 @@
             <h3>Objetivo del Lab</h3>
             <p>
               Bypassear el mecanismo de defensa que elimina las secuencias <code>../</code> de manera simple 
-              para extraer el archivo crítico del sistema <code>/etc/passwd</code>[cite: 7].
+              para extraer el archivo crítico del sistema <code>/etc/passwd</code>.
             </p>
           </div>
 
@@ -110,7 +110,7 @@
             <h3>Explotación (Payload)</h3>
             <p>
               Se utilizó el payload anidado <code>....//</code> en la petición enviada al Repeater, 
-              provocando que al remover las secuencias internas quede un <code>../</code> válido[cite: 7].
+              provocando que al remover las secuencias internas quede un <code>../</code> válido.
             </p>
           </div>
 
@@ -126,7 +126,7 @@
 
         <div class="note-callout" style="margin-top: 2rem;">
           <strong>Nota académica:</strong> El procedimiento detallado, las capturas de pantalla de la intercepción en Burp Suite, 
-          el análisis del payload y la evidencia de resolución se encuentran integrados en el visor del reporte formal en PDF adjunto abajo[cite: 7].
+          el análisis del payload y la evidencia de resolución se encuentran integrados en el visor del reporte formal en PDF adjunto abajo.
         </div>
 
       </div>
