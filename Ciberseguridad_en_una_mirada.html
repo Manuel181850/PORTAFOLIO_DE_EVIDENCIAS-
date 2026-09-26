@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Ciberseguridad en una mirada — Resumen ejecutivo y documento de análisis en formato PDF."
+  >
+
+  <title>Ciberseguridad en una mirada | Portafolio de Ciberseguridad</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <canvas id="matrix-rain" aria-hidden="true"></canvas>
+
+  <!-- Barra de navegación (Cabecera) -->
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Navegación principal">
+
+      <a class="brand" href="index.html" aria-label="Ir al inicio">
+        <span class="brand-symbol">&gt;_</span>
+        <span class="brand-text">MHG<span>.sec</span></span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="mainMenu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-menu" id="mainMenu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="index.html#sobre-mi">Sobre mí</a></li>
+        <li><a href="evidencias.html">Evidencias</a></li>
+        <li><a href="road-to-hall-of-fame.html" class="nav-hof">Road to Hall of Fame</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contenido Principal: Visor y Descarga de PDF -->
+  <main>
+    <section class="evidence section" style="padding-top: 4rem; padding-bottom: 4rem;">
+      <div class="container">
+
+        <div class="section-heading" style="text-align: center; margin-bottom: 2.5rem;">
+          <p class="section-label">Documento Ejecutivo</p>
+          <h1 class="evidence-title glitch" data-text="Ciberseguridad en una mirada" style="font-size: 2.5rem; margin-top: 0.5rem;">Ciberseguridad en una mirada</h1>
+          <p class="section-intro" style="margin: 0 auto; max-width: 600px;">
+            Consulta y descarga el documento de análisis enfocado en los puntos clave de la ciberseguridad moderna.
+          </p>
+        </div>
+
+        <!-- Contenedor de Descarga -->
+        <div class="report-download" style="max-width: 900px; margin: 0 auto 2rem auto;">
+          <div class="report-download-text">
+            <div class="card-icon" aria-hidden="true">▤</div>
+            <h3>Ciberseguridad_en_una_mirada.pdf</h3>
+            <p>Documento oficial en formato PDF listo para su consulta o almacenamiento local.</p>
+          </div>
+          <a href="Ciberseguridad_en_una_mirada.pdf" download class="button button-primary">
+            Descargar Reporte PDF
+            <span aria-hidden="true">↓</span>
+          </a>
+        </div>
+
+        <!-- Visor Embebido de PDF -->
+        <div class="pdf-viewer" style="max-width: 900px; margin: 0 auto;">
+          <object data="Ciberseguridad_en_una_mirada.pdf" type="application/pdf" width="100%" height="650">
+            <div class="iframe-placeholder">
+              <span class="placeholder-icon">▤</span>
+              <strong>No se pudo previsualizar el PDF</strong>
+              <small>Tu navegador no admite la vista embebida. Utiliza el botón de descarga superior.</small>
+            </div>
+          </object>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>
+        © <span id="currentYear"></span> Manuel Eduardo Hernández Gaytán.
+        Portafolio académico de Ciberseguridad — UPSLP.
+      </p>
+
+      <span class="ssl-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5l-8-3Z"/>
+          <path d="m9 12 2 2 4-4"/>
+        </svg>
+        HTTPS — Sitio Seguro y Certificado (SSL)
+      </span>
+
+      <a
+        href="https://github.com/Manuel181850"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        github.com/Manuel181850 ↗
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
