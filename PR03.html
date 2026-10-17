@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta
+    name="description"
+    content="Proyecto PR02: Blindando la información - Gobernanza, cumplimiento y gestión de incidentes en INTERAFAS-LAB, UPSLP."
+  >
+
+  <title>PR02: Blindando la Información | Portafolio de Ciberseguridad</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Estilos de Terminal integrados -->
+  <style>
+    .terminal-window {
+        background-color: #11111b;
+        border: 1px solid #313244;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+        margin-bottom: 30px;
+        overflow: hidden;
+    }
+
+    .terminal-header-bar {
+        background-color: #1f1f1f;
+        padding: 10px 15px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #313244;
+    }
+
+    .terminal-buttons {
+        display: flex;
+        gap: 8px;
+    }
+
+    .btn-circle {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+    }
+
+    .btn-close { background-color: #ff5f56; }
+    .btn-minimize { background-color: #ffbd2e; }
+    .btn-maximize { background-color: #27c93f; }
+
+    .terminal-title {
+        margin-left: 15px;
+        font-size: 0.85rem;
+        color: #9399b2;
+        font-family: 'JetBrains Mono', monospace;
+    }
+
+    .terminal-body {
+        padding: 25px;
+        font-family: 'JetBrains Mono', monospace;
+    }
+
+    .prompt {
+        color: #00ff66;
+        font-weight: bold;
+    }
+
+    .command {
+        color: #cdd6f4;
+        font-weight: bold;
+    }
+
+    pre {
+        background-color: #181825;
+        border: 1px solid #313244;
+        padding: 15px;
+        border-radius: 5px;
+        overflow-x: auto;
+        color: #f9e2af;
+        font-size: 0.85rem;
+        margin: 15px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="matrix-rain" aria-hidden="true"></canvas>
+
+  <!-- Barra de navegación -->
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Navegación principal">
+
+      <a class="brand" href="index.html" aria-label="Ir al inicio">
+        <span class="brand-symbol">&gt;_</span>
+        <span class="brand-text">MHG<span>.sec</span></span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="mainMenu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-menu" id="mainMenu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="index.html#sobre-mi">Sobre mí</a></li>
+        <li><a href="evidencias.html" class="active-link">Evidencias</a></li>
+        <li><a href="road-to-hall-of-fame.html" class="nav-hof">Road to Hall of Fame</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Encabezado de la evidencia en formato Terminal -->
+    <section class="evidence-hero section">
+      <div class="container">
+        
+        <div class="terminal-window">
+          <div class="terminal-header-bar">
+            <div class="terminal-buttons">
+              <div class="btn-circle btn-close"></div>
+              <div class="btn-circle btn-minimize"></div>
+              <div class="btn-circle btn-maximize"></div>
+            </div>
+            <div class="terminal-title">root@kali:~ // PR02_Gobernanza_Cumplimiento.sh</div>
+          </div>
+          <div class="terminal-body">
+            <p class="eyebrow" style="margin-bottom: 10px;">
+              <span class="status-dot"></span>
+              Parcial II · Sistemas de Gestión de la Seguridad: PR02
+            </p>
+            <h1 class="evidence-title glitch" data-text="Blindando la información: gobernanza y cumplimiento" style="font-size: 1.8rem; color: #00ff66;">PR02 - Blindando la información: gobernanza y cumplimiento</h1>
+            <p class="evidence-subtitle" style="margin-top: 10px;">
+              Evaluación integral de la postura de ciberseguridad, análisis de vulnerabilidades en infraestructura crítica simulada 
+              (INTERAFAS-LAB) y diseño de marcos de gobernanza, ISO 27001, comunicación de crisis y respuesta ante incidentes[cite: 8].
+            </p>
+
+            <div class="tags" style="margin-top: 15px;">
+              <span>#GobernanzaYCumplimiento</span>
+              <span>#ISO27001</span>
+              <span>#IncidentResponse</span>
+              <span>#InterafasLab</span>
+              <span>#UPSLP</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Resumen técnico y Objetivos -->
+    <section class="presentation section" id="resumen">
+      <div class="container">
+
+        <div class="terminal-window">
+          <div class="terminal-header-bar">
+            <div class="terminal-buttons">
+              <div class="btn-circle btn-close"></div>
+              <div class="btn-circle btn-minimize"></div>
+              <div class="btn-circle btn-maximize"></div>
+            </div>
+            <div class="terminal-title">01 - Alcance y Objetivos del Proyecto</div>
+          </div>
+          <div class="terminal-body">
+            <div class="section-heading" style="margin-bottom: 20px;">
+              <div>
+                <p class="section-label">01 / Resumen general</p>
+                <h2 style="color: #89b4fa;">Contexto de INTERAFAS-LAB</h2>
+              </div>
+              <p class="section-intro" style="color: #a6e3a1; margin-top: 5px;">
+                El proyecto se desarrolla en un entorno académico controlado que simula una organización responsable de servicios de infraestructura crítica[cite: 8].
+              </p>
+            </div>
+
+            <p style="color: #cdd6f4; margin-bottom: 15px;">
+              El estudiante asume inicialmente el rol de <strong>auditor de seguridad</strong> para identificar 20 vulnerabilidades y recopilar evidencias técnicas[cite: 8]. Posteriormente, adopta una perspectiva de <strong>gobernanza y gestión de crisis</strong> para proponer controles normativos, planes de respuesta y estrategias de comunicación[cite: 8].
+            </p>
+
+            <div class="presentation-grid" style="margin-top: 20px;">
+              <div class="presentation-card">
+                <div class="card-icon" aria-hidden="true">⚑</div>
+                <h3>Fase Técnica</h3>
+                <p>Identificación, comprobación y documentación de las 20 vulnerabilidades en la infraestructura simulada, recopilando banderas y logs[cite: 8].</p>
+              </div>
+
+              <div class="presentation-card">
+                <div class="card-icon" aria-hidden="true">&lt;/&gt;</div>
+                <h3>Fase Estratégica</h3>
+                <p>Propuesta de gobernanza basada en ISO/IEC 27001, matriz de riesgos, plan de comunicación de crisis y playbooks de respuesta (CISA)[cite: 7, 8].</p>
+              </div>
+
+              <div class="presentation-card">
+                <div class="card-icon" aria-hidden="true">🛡</div>
+                <h3>Resiliencia Organizacional</h3>
+                <p>Vinculación de hallazgos técnicos con impactos en la continuidad operativa, reputación y toma de decisiones directivas[cite: 7, 8].</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Entregables del Proyecto (Los 5 productos) -->
+    <section class="evidence section section-alt" id="entregables">
+      <div class="container">
+
+        <div class="terminal-window">
+          <div class="terminal-header-bar">
+            <div class="terminal-buttons">
+              <div class="btn-circle btn-close"></div>
+              <div class="btn-circle btn-minimize"></div>
+              <div class="btn-circle btn-maximize"></div>
+            </div>
+            <div class="terminal-title">02 - Entregables del Proyecto (5 Productos)</div>
+          </div>
+          <div class="terminal-body">
+            <div class="section-heading" style="margin-bottom: 20px;">
+              <div>
+                <p class="section-label">02 / Estructura de entrega</p>
+                <h2 style="color: #89b4fa;">Paquete de Documentación y Evidencias</h2>
+              </div>
+              <p class="section-intro" style="color: #a6e3a1; margin-top: 5px;">
+                Estructura de archivos requerida para la evaluación final del proyecto integrador.
+              </p>
+            </div>
+
+            <ul style="list-style-type: none; padding: 0;">
+              <li style="margin-bottom: 12px; background: #181825; padding: 12px; border-radius: 6px; border: 1px solid #313244;">
+                <code style="color: #00ff66;">01.matricula.zip</code> — Fichero con bitácoras, logs y evidencias de registro de las 20 banderas recolectadas en INTERAFAS-LAB[cite: 2, 8].
+              </li>
+              <li style="margin-bottom: 12px; background: #181825; padding: 12px; border-radius: 6px; border: 1px solid #313244;">
+                <code style="color: #89b4fa;">02.ApellidosNombre_InformeSeguridadOfensiva.pdf</code> — Documentación técnica de las 20 vulnerabilidades, cadena de ataque y mitigaciones[cite: 6, 8].
+              </li>
+              <li style="margin-bottom: 12px; background: #181825; padding: 12px; border-radius: 6px; border: 1px solid #313244;">
+                <code style="color: #89b4fa;">03.ApellidosNombre_ISO27.pdf</code> — Propuesta de implementación SGSI, alcance, matriz de riesgos, RACI y políticas de seguridad[cite: 5, 8].
+              </li>
+              <li style="margin-bottom: 12px; background: #181825; padding: 12px; border-radius: 6px; border: 1px solid #313244;">
+                <code style="color: #89b4fa;">04.ApellidosNombre_PlanComunicacionCrisis.pdf</code> — Plan institucional para gestionar comunicación, cobertura mediática y vocería[cite: 4, 7, 8].
+              </li>
+              <li style="margin-bottom: 12px; background: #181825; padding: 12px; border-radius: 6px; border: 1px solid #313244;">
+                <code style="color: #89b4fa;">05.ApellidosNombre_PlanRespuestaAnteIncidentes.pdf</code> — Estrategia, playbooks operativos (CISA) y procedimientos de contención y recuperación[cite: 3, 7, 8].
+              </li>
+            </ul>
+
+            <!-- Visor del documento principal o informe -->
+            <div style="margin-top: 30px;">
+              <h3 style="color: #f9e2af; margin-bottom: 10px;">Previsualización de Documentación Técnica</h3>
+              <p style="color: #a6e3a1; font-size: 0.9rem; margin-bottom: 15px;">
+                A continuación se muestra el acceso al informe principal del proyecto.
+              </p>
+              
+              <div class="report-download">
+                <div class="report-download-text">
+                  <div class="card-icon" aria-hidden="true">▤</div>
+                  <h3>Informe_Seguridad_Ofensiva_PR02.pdf</h3>
+                  <p>Documento integral en formato PDF con la documentación del laboratorio.</p>
+                </div>
+                <a href="Informe_Seguridad_Ofensiva_PR02.pdf" download class="button button-primary" style="border-color: #00ff66; color: #00ff66;">
+                  Descargar Informe PDF
+                  <span aria-hidden="true">↓</span>
+                </a>
+              </div>
+
+              <div class="pdf-viewer" style="margin-top: 20px;">
+                <object data="Informe_Seguridad_Ofensiva_PR02.pdf" type="application/pdf" width="100%" height="600">
+                  <div class="iframe-placeholder" style="padding: 40px; text-align: center; background: #181825; color: #f9e2af;">
+                    <span class="placeholder-icon" style="font-size: 2rem;">▤</span>
+                    <strong style="display: block; margin-top: 10px;">No se pudo previsualizar el PDF directamente</strong>
+                    <small style="color: #9399b2;">Utiliza el botón de descarga superior para consultar el entregable completo.</small>
+                  </div>
+                </object>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>
+        © <span id="currentYear"></span> Manuel Eduardo Hernández Gaytán.
+        Parcial II: Sistemas de Gestión de la Seguridad — UPSLP[cite: 8].
+      </p>
+
+      <span class="ssl-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5l-8-3Z"/>
+          <path d="m9 12 2 2 4-4"/>
+        </svg>
+        HTTPS — Sitio Seguro y Certificado (SSL)
+      </span>
+
+      <a
+        href="https://github.com/Manuel181850"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        github.com/Manuel181850 ↗
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
